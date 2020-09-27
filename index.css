@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
+
+/* Variable color */
+:root {
+  --main-white: #f0f0f0;
+  --main-pink: #e43f5a;
+  --main-blue: #1f4068;
+  --main-gray: #162447;
+  --main-black: #1b1b2f;
+}
+
+/* General Style */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "MuseoModerno", cursive;
+  background: var(--main-gray);
+  color: var(--main-white);
+  margin: 0;
+}
+/* Navbar */
+nav {
+  background: var(--main-pink);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+nav a {
+  color: var(--main-white);
+  margin-left: 50px;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav:hover {
+  background: var(--main-gray);
+  color: var(--main-pink);
+  border-bottom: var(--main-pink) solid 2px;
+}
+nav a:hover {
+  color: var(--main-pink);
+  transform: translateY(2px);
+}
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+    padding: 10px;
+  }
+  nav a {
+    font-size: 15px;
+    margin: 0px 50px;
+  }
+}
+/* header */
+header {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header::after {
+  content: "";
+  position: absolute;
+  background: var(--main-black);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-size: 90px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+header p {
+  font-size: 25px;
+  margin: 0;
+  color: var(--main-pink);
+}
+.fa-laptop-code {
+  font-size: 30px;
+  margin: 10px;
+}
+.certficationBox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.certficationBox a:hover {
+  transform: scale(1.25);
+  transition: transform 0.8s ease;
+}
+
+.badgeIbm img {
+  width: 100px;
+  margin-left: 20px;
+}
+.fa-free-code-camp {
+  font-size: 500%;
+  color: white;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 45px;
+    margin-top: 15%;
+  }
+  header p {
+    font-size: 20px;
+  }
+  .fa-laptop-code {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .certficationBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .badgeIbm img {
+    width: 70px;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .fa-free-code-camp {
+    font-size: 300%;
+  }
+}
+@media (max-height: 580px) {
+  header {
+    height: auto;
+    margin-top: 6%;
+  }
+}
+/* Projects */
+#projects {
+  text-align: center;
+  padding: 10px;
+}
+#projects h1 {
+  font-size: 50px;
+  text-decoration: underline var(--main-pink);
+}
+.project-tile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project {
+  max-width: 25%;
+  margin: 15px;
+}
+.project:hover {
+  transform: scale(1.1);
+  transition: transform 0.8s ease;
+}
+.project img {
+  max-width: 100%;
+}
+.project h3 {
+  color: white;
+}
+@media (max-width: 600px) {
+  #projects h1 {
+    font-size: 200%;
+  }
+  .project-tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project {
+    max-width: 50%;
+    margin: 5px;
+  }
+  .project h3 {
+    font-size: 100%;
+  }
+}
+/* Contact */
+#contact {
+  text-align: center;
+  background-color: var(--main-blue);
+  padding: 5px;
+}
+#contact p {
+  margin-bottom: 0;
+}
+#contact ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+#contact ul a {
+  color: var(--main-pink);
+  font-size: 30px;
+  padding: 15px;
+}
+#contact ul li:hover {
+  transform: translateY(5px);
+}
+@media (max-width: 600px) {
+  #contact ul {
+    flex-direction: column;
+  }
+  #contact ul li:hover {
+    transform: translateY(2px);
+  }
+  #contact ul a {
+    color: var(--main-pink);
+    font-size: 25px;
+    padding: 10px;
+  }
+}
+
+/* footer */
+footer {
+  background: var(--main-pink);
+  padding: 20px;
+  text-align: right;
+}
+@media (max-width: 600px) {
+  footer {
+    font-size: 80%;
+    padding: 10px;
+  }
+}
