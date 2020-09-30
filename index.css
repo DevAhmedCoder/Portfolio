@@ -222,7 +222,7 @@ header p {
 }
 @media (max-width: 600px) {
   #contact ul {
-    flex-direction: column;
+    flex-direction: row;
   }
   #contact ul li:hover {
     transform: translateY(2px);
@@ -230,7 +230,7 @@ header p {
   #contact ul a {
     color: var(--main-pink);
     font-size: 25px;
-    padding: 10px;
+    padding: 7px;
   }
 }
 
