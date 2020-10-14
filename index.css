@@ -115,7 +115,7 @@ header p {
   margin-left: 20px;
 }
 .fa-free-code-camp {
-  font-size: 500%;
+  font-size: 550%;
   color: white;
 }
 @media (max-width: 600px) {
@@ -177,6 +177,10 @@ header p {
 }
 .project h3 {
   color: white;
+
+}
+a{
+  text-decoration: none;
 }
 @media (max-width: 600px) {
   #projects h1 {
